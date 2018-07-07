@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>INDIAN SOCIETY OF AGRIBUSINESS PROFESSIONALS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Crop Raising Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+        text-align: center;
+
+    
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+  
+  <tr>
+    <th>Center Head</th>
+    
+  </tr>
+
+</table>
+<br>
+
+<form action="approve">
+<div style="overflow-x:auto;">
+<table id="customers">
+  
+  <tr>
+    <td><B>booking id </B></td>
+    <td><B>start date</B></td>
+	<td><B>end date</B></td>
+	<td><B>machine id</B></td>
+	<td><B>priority</B></td>
+	<td><B>operator</B></td>
+	<td><B>count</B></td>
+	
+  </tr>
+  {% for i in range(c.length)%}
+ <tr>
+    <td>{{c.getValue("bid")}}</td>
+    <td>{{c.getValue("startdate")}}</td>
+	<td>{{c.getValue("end date")}}</td>
+	<td>{{c.getValue("machine id")}}</td>
+	<td>{{c.getValue("priority")}}</td>
+	<td>{{c.getValue("operator")}}</td>
+	<td>{{c.getValue("count")}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+<br><br>
+<center>
+<table id="customers">
+  
+  <tr>
+    <td><center>
+	<input type="submit" value="submit" width="30%">
+</center></td>
+   
+  </tr>
+
+</table>
+</center>
+</form>
+</body>
+</html>
