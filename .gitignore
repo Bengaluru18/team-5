@@ -7,3 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+farmer/src/environments/environment.ts
+farmer/src/environments/environment.prod.ts
