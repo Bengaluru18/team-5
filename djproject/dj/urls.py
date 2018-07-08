@@ -23,6 +23,10 @@ urlpatterns = [
     url(r'^index.html',views.indexPage.as_view()),
     url(r'^statehead.html',views.StatePage.as_view()),
     url(r'^projecthead.html',views.ProjectPage.as_view()),
+    url(r'^center_login.*',views.Authentication.as_view()),
+    url(r'^state_login.*',views.Authentication2.as_view()),
+    url(r'^my_heatmap',views.Myheat.as_view()),
+
 
 
 

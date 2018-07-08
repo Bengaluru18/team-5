@@ -56,23 +56,23 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
   
   <tr>
     <td><B>booking id </B></td>
-    <td><B>start date</B></td>
+    <td><B>count</B></td>
 	<td><B>end date</B></td>
 	<td><B>machine id</B></td>
-	<td><B>priority</B></td>
+	  <td><B>priority</B></td>
 	<td><B>operator</B></td>
-	<td><B>count</B></td>
+	<td><B>start date</B></td>
 	
   </tr>
-  {% for i in range(c.length)%}
+  {% for i in range(0,int(le))%}
  <tr>
-    <td>{{c.getValue("bid")}}</td>
-    <td>{{c.getValue("startdate")}}</td>
-	<td>{{c.getValue("end date")}}</td>
-	<td>{{c.getValue("machine id")}}</td>
-	<td>{{c.getValue("priority")}}</td>
-	<td>{{c.getValue("operator")}}</td>
-	<td>{{c.getValue("count")}}</td>
+    <td>{{mdt[i].getValue("booking_id")}}</td>
+    <td>{{mdt[i].getValue("count")}}</td>
+	<td>{{mdt[i].getValue("end_date")}}</td>
+	<td>{{mdt[i].getValue("machine_id")}}</td>
+	<td>{{mdt[i].getValue("operator")}}</td>
+	<td>{{mdt[i].getValue("start_date")}}</td>
+
   </tr>
   {% endfor %}
 </table>
