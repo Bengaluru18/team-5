@@ -80,7 +80,7 @@ class Authentication(TemplateView):
 
             return render(request, 'centre_analytics.html')
         else:
-            return render(request,"incorrect credentials")
+            return render(request,"error.html")
 
 
 class Authentication2(TemplateView):
@@ -158,9 +158,17 @@ class Authentication2(TemplateView):
             gmap.draw("dj/templates/my_heatmap.html")
             return render(request, 'state_analytics.html')
         else:
-            return render(request, "incorrect credentials")
+            return render(request, "error.html")
 
+class Authentication3(TemplateView):
 
+    def get(self, request, **kwargs):
+        self.un = request.GET['username']
+        self.ps = request.GET['password']
+        if self.un == "admin" and self.ps == "admin":
+            return render(request,'l1.html')
+        else:
+            return render(request, "error.html")
 class Myheat(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'my_heatmap.html')

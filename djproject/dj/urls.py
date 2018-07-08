@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^center_login.*',views.Authentication.as_view()),
     url(r'^state_login.*',views.Authentication2.as_view()),
     url(r'^my_heatmap',views.Myheat.as_view()),
+    url(r'^project_login',views.Authentication3.as_view()),
 
 
 
