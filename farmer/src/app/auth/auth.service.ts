@@ -38,6 +38,8 @@ export class AuthService {
       .catch(error => console.log(error));
   }
 
+  
+
   logout():void{
     this.afAuth.auth.signOut();
     this.router.navigate(['/'])

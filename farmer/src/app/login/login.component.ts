@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
         this.username=username;
         this.password=password;
-
+        this.router.navigate(['book']);
 
       }).catch(error => console.log(error));
 

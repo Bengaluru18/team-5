@@ -11,6 +11,11 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { RegisterComponent } from './register/register.component';
+import { PaymentComponent } from './payment/payment.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import  {AngularFireDatabase} from 'angularfire2/database';
+import { PageComponent } from './page/page.component';
+import { RepositoryComponent } from './repository/repository.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +23,20 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     LogoutComponent,
     BookComponent,
-    RegisterComponent
+    RegisterComponent,
+    PaymentComponent,
+    PageComponent,
+    RepositoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
